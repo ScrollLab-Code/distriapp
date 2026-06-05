@@ -1,5 +1,10 @@
 ﻿import { useState, useRef, useEffect } from 'react'
 import { sessSet, passOk, setupPass, hasPass } from '../lib/auth'
+import { getAuth } from "firebase/auth";
+import { app } from "../firebase"; // Importas 'app' que configuraste antes
+
+const auth = getAuth(app);
+// Ahora ya puedes usar 'auth' para iniciar sesión, registrar, etc.
 
 interface Props {
   onSuccess: () => void
